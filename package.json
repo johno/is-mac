@@ -1,0 +1,34 @@
+{
+  "name": "is-mac",
+  "version": "0.0.1",
+  "description": "Check whether a string is a valid MAC address.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnotander/is-mac.git"
+  },
+  "keywords": [
+    "mac",
+    "mac-address",
+    "valid",
+    "validation"
+  ],
+  "author": "John Otander <johnotander@gmail.com> (http://johnotander.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnotander/is-mac/issues"
+  },
+  "homepage": "https://github.com/johnotander/is-mac",
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  },
+  "dependencies": {
+    "mac-regex": "0.0.1"
+  }
+}
