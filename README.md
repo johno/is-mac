@@ -18,6 +18,7 @@ var isMac = require('is-mac');
 
 isMac('invalid-mac') // => false
 isMac('aa-bb-cc-dd-ee-ff') // => true
+isMac({}) // => throws TypeError
 ```
 
 ## License
