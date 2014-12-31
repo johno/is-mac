@@ -29,6 +29,6 @@
     "mocha": "^2.0.1"
   },
   "dependencies": {
-    "mac-regex": "0.0.1"
+    "mac-regex": "^1.0.0"
   }
 }

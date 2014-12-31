@@ -5,5 +5,5 @@ module.exports = function(mac) {
     throw new TypeError('is-mac expects a string');
   }
 
-  return macRegex().test(mac);
+  return macRegex({ exact: true }).test(mac);
 };
