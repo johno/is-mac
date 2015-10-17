@@ -16,7 +16,7 @@ test('returns false wtesthout a mac', t => {
 test('throws an error when a string is not passed', t => {
   t.plan(1)
 
-  t.error(isMac, TypeError, 'is-mac expects a string')
+  t.throws(isMac, TypeError)
 });
 
 test('returns false when the string is not an exact match', t => {
