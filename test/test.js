@@ -1,21 +1,26 @@
-var assert = require('assert');
-var isMac = require('..');
+import test from 'ava'
+import isMac from './'
 
-describe('is-mac', function() {
+test('returns true wtesth a mac', t => {
+  t.plan(1)
 
-  it('should return true with a mac', function() {
-    assert.ok(isMac('aa-bb-cc-dd-ee-ff'));
-  });
+  t.true(isMac('aa-bb-cc-dd-ee-ff'))
+});
 
-  it('should return false without a mac', function() {
-    assert.ok(!isMac('aabb'));
-  });
+test('returns false wtesthout a mac', t => {
+  t.plan(1)
 
-  it('should throw an error when a string is not passed', function() {
-    assert.throws(isMac, TypeError, "is-mac expects a string");
-  });
+  t.false(isMac('aabb'))
+});
 
-  it('should return false when the string is not an exact match', function() {
-    assert.ok(!isMac('apples aa:bb:cc:dd:ee:ff'));
-  });
+test('throws an error when a string is not passed', t => {
+  t.plan(1)
+
+  t.error(isMac, TypeError, 'is-mac expects a string')
+});
+
+test('returns false when the string is not an exact match', t => {
+  t.plan(1)
+
+  t.true(!isMac('apples aa:bb:cc:dd:ee:ff'));
 });
