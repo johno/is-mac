@@ -1,18 +1,12 @@
-var macRegex = require('mac-regex')
+const macRegex = require('mac-regex')
 
-var availableDelimiters = [':', '-']
+const availableDelimiters = [':', '-']
 
-var hasMixedDelimiters = function (mac, delimiters) {
-  for (var i = 0; i < delimiters.length; i++) {
-    if (mac.includes(delimiters[i]) && mac.split(delimiters[i]).length !== 6) {
-      return true
-    }
-  }
-
-  return false
+const hasMixedDelimiters = (mac, delimiters) => {
+  return delimiters.some((delimiter) => mac.includes(delimiter) && mac.split(delimiter).length !== 6)
 }
 
-module.exports = function (mac) {
+module.exports = (mac) => {
   if (typeof mac !== 'string') {
     throw new TypeError('is-mac expected a string')
   }
