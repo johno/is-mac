@@ -1,6 +1,6 @@
 {
   "name": "is-mac",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Check whether a string is a valid MAC address.",
   "author": {
     "name": "John Otander",
